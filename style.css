@@ -1,0 +1,346 @@
+/* Common styles */
+:root {
+    --primary-color: #Faf7bd;
+    --secondary-color: #810303;
+    --text-color: #810303;
+    --background-color: #Faf7bd;
+    --hover-color: #810303;
+    --facebook-color: #810303; /* Add this line for Facebook icon color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat SemiBold', Montserrat SemiBold;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure the header is the relative parent */
+}
+
+header .container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Ensure the container is the relative parent for absolute positioning */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative; /* Added for positioning child elements */
+}
+
+header .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+header .logo span {
+    font-size: 1.5em;
+}
+
+header .facebook-link {
+    font-size: 1.7em; /* Adjust this value to make the icon larger */
+    color: var(--facebook-color); /* Use the variable for Facebook icon color */
+    margin-left: 20px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: var(--hover-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--text-color);
+    transform: scale(1.1);
+}
+
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+header nav ul li a#facebookLink {
+    color: var(--facebook-color); /* Use the variable for Facebook icon color */
+    text-decoration: none; /* Remove underline */
+}
+
+header nav ul li a#facebookLink:hover {
+    color: var(--text-color);
+}
+
+.hero {
+    background: url('image/back.png') no-repeat center center/cover;
+    height: 500px;
+    position: relative;
+    transition: background 0.5s ease-in-out;
+    color: #Faf7bd;
+}
+
+.hero .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: #Faf7bd;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    transition: background 0.5s ease-in-out;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hero:hover {
+    background: url('image/back.png') no-repeat center center/cover;
+}
+
+.hero:hover .overlay {
+    background: rgba(0, 0, 0, 0);
+    opacity: 0.3;
+}
+
+.hero h1, .hero p {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hero:hover h1, .hero:hover p {
+    opacity: 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+main {
+    flex: 1;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.featured-designs {
+    background: url('image/front.png') no-repeat center center/cover;
+    padding: 40px 20px;
+    color: var(--primary-color);
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: auto;
+    border: 2px solid #Faf7bd;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery img.zoom:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin: 10px 0 5px;
+    color: var(--secondary-color); /* Set the color of the labels */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #Faf7bd;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); /* Add low opacity background */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    color: #Faf7bd;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+.contact {
+    padding: 40px 20px;
+    background-color: #810303; /* Add background color to contact section */
+}
+
+.contact h2 {
+    color: var(--primary-color); /* Separate color for the "CONTACT" text */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer {
+    background: #Faf7bd;
+    color: #810303;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+/* Profile container and animation */
+.profile-container {
+    position: fixed;
+    top: 50%;
+    right: -300px;
+    transform: translateY(-50%);
+    width: 200px;
+    padding: 20px;
+    background-color: #Faf7bd;
+    box-shadow: 0 4px 8px rgba(250, 247, 0, 0.1);
+    border-radius: 10px;
+    transition: right 0.5s ease;
+    text-align: center;
+}
+
+.profile-img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-container h2 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.profile-container p {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.profile-container a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-container a:hover {
+    color: var(--hover-color);
+}
+
+.profile-container.active {
+    right: 20px;
+}
+
+/* Background images for sections */
+.design-background {
+    background: url('image/front.png') no-repeat center center/cover;
+    color: #Faf7bd;
+}
+
+.contact-background {
+    background: url('image/front.png') no-repeat center center/cover;
+    color: #Faf7bd;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header .facebook-link {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+
+    form {
+        width: 90%;
+    }
+}

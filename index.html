@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keith Pixel - KeithPixel</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo" id="logo">
+                <img src="image/proapyl;.png" alt="Keith Pixel Logo" class="logo-img">
+                <span>Keith Pixel</span>
+                <a href="https://www.facebook.com/profile.php?id=61553970597432" target="_blank" class="facebook-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" id="homeLink">Home</a></li>
+                    <li><a href="#designs" id="designLink">T-Shirt Design</a></li>
+                    <li><a href="#contact" id="contactLink">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="mainContent">
+        <section class="hero" id="home" role="banner">
+            <div class="overlay">
+                <h1 data-aos="fade-up" data-aos-duration="1000">Welcome to Keith Pixel</h1>
+                <p data-aos="fade-up" data-aos-duration="1000">Explore my unique T-shirt designs</p>
+            </div>
+        </section>
+        <section class="content featured-designs" id="designs" role="main">
+            <h2 data-aos="fade-up" data-aos-duration="1000">Featured T-Shirt Designs</h2>
+            <div class="gallery">
+                <a href="image/HUMMS CLUSTER B.png" data-lightbox="gallery" aria-label="HUMMS Cluster Design">
+                    <img src="image/HUMMS CLUSTER B.png" alt="HUMMS Cluster Design" class="zoom" data-aos="zoom-in" data-aos-duration="1500">
+                </a>
+                <a href="image/EAGL ESCOUT.png" data-lightbox="gallery" aria-label="Eagle Scout Design">
+                    <img src="image/EAGL ESCOUT.png" alt="Eagle Scout Design" class="zoom" data-aos="zoom-in" data-aos-duration="1500">
+                </a>
+                <a href="image/DEMOLAY.png" data-lightbox="gallery" aria-label="Eagle Scout Design">
+                    <img src="image/DEMOLAY.png" alt="Eagle Scout Design" class="zoom" data-aos="zoom-in" data-aos-duration="1500">
+                </a>
+                <a href="image/nvcnursing.png" data-lightbox="gallery" aria-label="Eagle Scout Design">
+                    <img src="image/nvcnursing.png" alt="Eagle Scout Design" class="zoom" data-aos="zoom-in" data-aos-duration="1500">
+                </a>
+                <!-- Add more images similarly -->
+            </div>
+        </section>
+    </main>
+    <div class="profile-container" id="profileContainer">
+        <img src="image/earl.png" alt="Profile Image" class="profile-img">
+        <h2>Keith Pixel</h2>
+        <p>Layout Artist</p>
+        <p>Owner of Keith Pixel.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Keith Pixel. All rights reserved.</p>
+    </footer>
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
